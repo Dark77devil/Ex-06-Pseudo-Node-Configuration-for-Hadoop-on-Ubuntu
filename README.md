@@ -1,86 +1,94 @@
-# Ex-06-Pseudo-Node-Configuration-for-Hadoop-on-Ubuntu
-
-## AIM
-
+Ex-06-Pseudo-Node-Configuration-for-Hadoop-on-Ubuntu
+AIM
 To implement Pseudo Node configuration for Hadoop on ubuntu
 
-## Pre-requisites
-
+Pre-requisites
 a) jdk
 
 Single-Node Configuration
+Create a dedicated user account for hadoop
+image
 
-1.	Create a dedicated user account for hadoop
+Install java1.8 in folder /usr/local
+image
 
-2.	Install java1.8 in folder /usr/local
-3.	Install Hadoop
+Install Hadoop
+image
 
-4.	Set the hadoop environment variables: Include the following lines in the
-$HOME/.bashrc file
+Set the hadoop environment variables: Include the following lines in the $HOME/.bashrc file
+image
 
- 
-5.	Set hadoop environment variables: Include the following lines /etc/profile file
+Set hadoop environment variables: Include the following lines /etc/profile file
+image
 
+Run the.bashrc & profile files from the $ prompt for updating the changes
+image
 
-6.	Run the.bashrc & profile files from the $ prompt for updating the changes
+image
 
+Configuration of the hadoop files: hadoop-env.sh, core-site.xml, mapred-site.xml, hdfs- site.xml and yarn-site.xml
+path :: /usr/local/hadoop-2.5.1/etc/hadoop
 
+a) hadoop-env.sh Include the following lines in hadoop-env.sh file
 
+image
 
-$ bin/hadoop version	
+b) core-site.xml Configure the directory for Hadoop to store its data files, the network ports it listens to, etc. Setup will use Hadoop’s Distributed File System (HDFS-single local machine)
 
-7.	Configuration of the hadoop files: hadoop-env.sh, core-site.xml, mapred-site.xml, hdfs- site.xml and yarn-site.xml
+image
 
-path ::	/usr/local/hadoop-2.5.1/etc/hadoop
+Include the following lines in core-site.xml file between and tags
 
-a)	hadoop-env.sh
-Include the following lines in hadoop-env.sh file
+image
 
+c) mapred-site.xml
 
-b)	core-site.xml
-Configure the directory for Hadoop to store its data files, the network ports it listens to, etc. Setup will use Hadoop’s Distributed File System (HDFS-single local machine)
-
-
- 
-Include the following lines in core-site.xml file between <configuration> and
-</configuration> tags
-
-
-c)	mapred-site.xml
- 
+image
 
 Include the following lines in mapred-site.xml file
- 
 
-d)	hdfs-site.xml
-Include the following lines in hdfs-site.xml file
+image
 
+d) hdfs-site.xml Include the following lines in hdfs-site.xml file
 
-e)	yarn-site.xml
-Include the following lines in yarn-site.xml file
-8.	Format the Hadoop File system implemented on top of the local file system using
+image
 
-9.	Start Hadoop using
+e) yarn-site.xml Include the following lines in yarn-site.xml file
 
+image
 
-Explore Hadoop using http://localhost:50070/ from the browser	
- 
-10.	The commonly used HDFS Commands are as follows:
+Format the Hadoop File system implemented on top of the local file system using
+image
 
+Start Hadoop using
+image
 
-11.	Create a directory ‘/input’ in HDFS
+Explore Hadoop using http://localhost:50070/ from the browser
 
+The commonly used HDFS Commands are as follows:
+image
 
-12.	Copy the input files into the distributed file system
+Create a directory ‘/input’ in HDFS
+image
 
-13.	Run some of the examples provided
+Copy the input files into the distributed file system
+image
 
+Run some of the examples provided
+image
 
-14.	Examine the output files
+Examine the output files
+image
+
 Copy the output files from the distributed file system to the local file system and examine them:
- 
+
+image
+
 or
+
 View the output files on the distributed file system
 
-## Result:
+image
+
+Result:
 Thus, the implementation of Pseudo Node configuration for Hadoop on ubuntu is successfully executed.
